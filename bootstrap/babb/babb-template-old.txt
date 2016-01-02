@@ -1,0 +1,148 @@
+--- Includes ---
+
+content (default)
+
+
+--- Constants ---
+
+// Page color + icon
+cssColor = fileadmin/babb/main_green.css
+
+// Template files
+htmlTemplate = fileadmin/babb/main.html
+cssTemplate = fileadmin/babb/main.css
+iconFile = fileadmin/babb/babb.ico
+
+// Header styles
+content.wrap.header = <FONT FACE="times"> | </FONT><BR>
+content.wrap.header1 = <FONT SIZE="5"> | </FONT>
+
+// Frame styles
+styles.content.frames.1.bgCol = royalblue
+
+
+
+--- Setup ---
+
+// Static document location
+config.absRefPrefix = /
+
+// Spam protect
+config.spamProtectEmailAddresses             = 1
+// config.spamProtectEmailAddresses_atSubst = [at]
+// config.spamProtectEmailAddresses_atSubst = &#064;
+
+// Sprache
+config.language = de
+config.locale_all = de_DE
+
+// Page
+page = PAGE
+page {
+  // Style sheet
+  typeNum    = 0
+  stylesheet = {$cssTemplate}
+  includeCSS.file1 = {$cssColor}  
+
+  // Favorite icon
+  shortcutIcon = {$iconFile}
+
+  // Meta tags
+  meta { 
+    keywords = Badminton, Federball, Club, Verein, Bonn, Beuel, Bundesliga, Deutscher Meister
+    description = Badminton Akademie Bonn-Beuel, BABB, 1. Badminton Club Beuel 1955 e.V.
+    copyright = 1. BC Beuel
+    author = Ottmar Krämer-Fuhrmann
+    language = de
+    robots = all
+  } // meta
+
+  // Template
+  10 = TEMPLATE
+  10 {
+    template         = FILE
+    template.file    = {$htmlTemplate}
+    workOnSubpart = DOCUMENT_BODY
+
+    // Main navigation menu
+    marks.MAINMENU = HMENU
+    marks.MAINMENU {
+      entrylevel = 1
+      wrap        = <TABLE WIDTH="100%">|</TABLE>
+
+      // First level
+      1     = TMENU
+      1.ACT = 1
+      1.NO {
+        allWrap        = <TR>|</TR>
+        RO             = 0
+        // beforeImg   = fileadmin/bcbeuel/but_of.gif
+        // beforeROImg = fileadmin/bcbeuel/but_on.gif
+        beforeWrap     = <TD>|</TD>
+        linkWrap       = <TD COLSPAN="3" WIDTH="100%"><FONT SIZE="2">|</FONT></TD>
+      } // 1.NO
+      1.ACT {
+        allWrap        = <TR>|</TR>
+        RO             = 0
+        // beforeImg   = fileadmin/bcbeuel/but_on.gif
+        // beforeROImg = fileadmin/bcbeuel/but_on.gif
+        beforeWrap     = <TD>|</TD>
+        linkWrap       = <TD COLSPAN="3" WIDTH="100%"><FONT SIZE="2" STYLE="text-decoration:underline;">|</FONT></TD>
+      } // 1.ACT
+
+      // Second level
+      2 = TMENU
+      2.ACT = 1
+      2.NO {
+        allWrap        = <TR><TD></TD>|</TR>
+        RO             = 0
+        // beforeImg   = fileadmin/bcbeuel/but_of_s.gif
+        // beforeROImg = fileadmin/bcbeuel/but_on_s.gif
+        beforeWrap     = <TD>|&nbsp;&nbsp;|</TD>
+        linkWrap       = <TD COLSPAN="2" WIDTH="100%"><FONT SIZE="2">|</FONT></TD>
+      } // 2.NO
+      2.ACT {
+        allWrap        = <TR><TD></TD>|</TR>
+        RO             = 0
+        // beforeImg   = fileadmin/bcbeuel/but_on_s.gif
+        // beforeROImg = fileadmin/bcbeuel/but_on_s.gif
+        beforeWrap     = <TD>|&nbsp;&nbsp;|</TD>
+        linkWrap       = <TD COLSPAN="2" WIDTH="100%"><FONT SIZE="2" STYLE="text-decoration:underline;">|</FONT></TD>
+      } // 2.ACT
+    }   // marks.MAINMENU
+
+    // Second column shows page subtitle or title
+    marks.HEADLINE = TEXT
+    marks.HEADLINE.field = subtitle//title
+
+    // Content
+    marks.INHALT = CONTENT
+    marks.INHALT {
+      table                = tt_content
+      select.where         = colPos = 0
+      select.orderBy       = sorting 
+      select.languageField = sys_language_uid
+    }   // marks.INHALT
+
+    # Last update 
+    marks.UPDATE = TEXT 
+    marks.UPDATE { 
+      data = page:lastUpdated
+      date = d.m.Y h:i
+      wrap = Letzte Änderung:&nbsp;|
+      data = register : SYS_LASTCHANGED 
+      if> 
+    }   // marks.UPDATE
+  }   // 10
+}   // page
+
+// Search
+tt_content.search.30 {
+  // Hide text
+  dataArray.10.label >
+
+  // Hide combo box, search in header + bodytext
+  dataArray.20.type = scols=hidden 
+  dataArray.20.valueArray > 
+  dataArray.20.value = tt_content.header-bodytext
+}   // tt_content.search.30
