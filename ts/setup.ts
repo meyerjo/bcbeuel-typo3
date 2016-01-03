@@ -31,6 +31,7 @@ page {
 
     includeCSS {
         bootstrap = fileadmin/template/bootstrap/css/bootstrap.min.css
+        colsmheight = fileadmin/template/bootstrap/css/col-sm-height.css
         bcbeuel = fileadmin/template/bootstrap/bcbeuel/bcbeuel.css
     }
 
@@ -58,6 +59,9 @@ page {
 
         }
     }
+
+    20 = TEXT
+    20.value = Lorem ipsum
 
 }
 
