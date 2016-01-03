@@ -1,102 +1,175 @@
 /* bcbeuel styles */
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  padding-top: 15px;
-  font-family: Times, Garamond, Minion;
-  background-image: url("http://www.bcbeuel.de/icons/BC_Hintergrund_gelb2.jpg");
-  background-repeat: no-repeat;
-  background-color: #FCE405;
+    padding-top: 15px;
+    font-family: Times, Garamond, Minion;
+    background-color: white;
 }
 
 a {
-  font-family: Consolas, Arial, Helvetica, sans-serif
+    font-family: Consolas, Arial, Helvetica, sans-serif
 }
 
 /* Menu */
 .menutd a {
-  font-family: Consolas, Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  padding-right: 40px;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    padding-right: 40px;
 }
 
 /* Misc */
 
 h3 {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
 a {
-  text-decoration: underline;
-  color: black;
+    text-decoration: underline;
+    color: black;
 }
 
 hr {
-  margin-top: 10px;
-  margin-bottom: 10px;  
-  color: #000000;
-  background-color: #000000;
-  border-top: 0;
-  height: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+    background-color: #000000;
+    border-top: 0;
+    height: 2px;
 }
 
 .blackframe {
-  background-color: #000000;
-  color: #FCE405;
-  font-family: Consolas, Arial, Helvetica, sans-serif;
-  letter-spacing: 0.03em;
+    background-color: #000000;
+    color: #FCE405;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.03em;
 }
 
 .headline {
-  font-family: Consolas, Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.03em;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.03em;
 }
 
 .termine {
-  font-family: Consolas, Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.03em;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.03em;
 }
 
 /* Navigation bar */
 .container-fluid {
-  padding-left: 0px;
-  padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+.container-fluid > div {
+    margin-left:12%;
+    margin-right:12%;
 }
 
 .navbar-default {
-  margin-bottom: 0px;
-  background-color: inherit;
-  border-style: none;
+    background-color: inherit;
+    border-style: none;
+    margin-left:12%;
+    margin-right:12%;
 }
 
 .navbar-collapse {
-  padding-left: 0px;
-  padding-right: 0px;
+    margin-left: 50px;
 }
 
+
 .navbar-default .navbar-nav>li>a {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  color: #000000;
-  font-family: Consolas, Arial, Helvetica, sans-serif;
-  font-weight: bold;
+    color: #000000;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  color: #0000FF;
-  font-family: Consolas, Arial, Helvetica, sans-serif;
-  font-weight: bold;
+    color: black;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #FCE405;
 }
+
+.navbar {
+    position: relative;
+}
+
+
+.navbar-default .navbar-nav>.open>a:focus {
+    background-color: #FCE405;
+}
+
+.navbar-default .navbar-nav>.open>ul>li>a {
+    color: #000000;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.navbar-default .navbar-nav>.open>ul>li>a:hover {
+    color: #000000;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #FCE405;
+}
+
+.brand {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px !important;  /* 50% of your logo width */
+    display: block;
+}
+
+.centralimg {
+    position: absolute;
+    display: block;
+    margin-top: 10px;
+}
+
+.maincontent {
+    background-color: #8DCFF0;
+}
+
+.menurow {
+    background-color:white;
+}
+
+.teamarea a{
+    text-decoration: none;
+}
+
+.sponsors {
+    margin-bottom: 40px;
+}
+
+.sponsorlink {
+    margin-top: 40px;
+}
+
+.mainmenu {
+    margin-left: 60px;
+}
+
+.footer {
+    background-color: #FCE405;
+    height: 100px;
+}
+
+
 
 /* Carousel
 .carousel-inner {
@@ -105,34 +178,34 @@ hr {
 */
 
 .carousel-caption {
-  top: 26%;
-  font-size: 320%;
-  font-weight: bolder;
-  color: #FCE405;
-  text-shadow: none;
+    top: 26%;
+    font-size: 320%;
+    font-weight: bolder;
+    color: #FCE405;
+    text-shadow: none;
 }
 
 .carousel-control {
-  height: 100%; /* Just to please Chrome */
+    height: 100%; /* Just to please Chrome */
 }
 .carousel-control>img {
-  position: relative;  
-  top: 43%;
-  opacity: 1.0;
+    position: relative;
+    top: 43%;
+    opacity: 1.0;
 }
 
 .carousel-indicators li {
-  background-color: #FFF67F;
-  opacity: 0.5;
-  width: 12px;
-  height: 12px;
-  border-radius: 12px;
-  border: 0px none;  
-  margin: 0px 5px;
+    background-color: #FFF67F;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    border: 0px none;
+    margin: 0px 5px;
 }
 
 .carousel-indicators .active {
-  background-color: #FCE405;
-  opacity: 1.0;
-  margin: 0px 5px;
+    background-color: #FCE405;
+    opacity: 1.0;
+    margin: 0px 5px;
 }
