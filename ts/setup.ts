@@ -10,6 +10,14 @@ config {
     spamProtectEmailAddresses_atSubst = &#064;
 }
 
+temp.terminElement = RECORDS
+temp.terminElement.tables = tt_content
+temp.terminElement.source = 5234
+
+temp.teamElement = RECORDS
+temp.teamElement.tables = tt_content
+temp.teamElement.source = 5235
+
 # Page layout
 page = PAGE
 page {
@@ -47,22 +55,34 @@ page {
         layoutRootPath = fileadmin/template/layouts/
         partialRootPath = fileadmin/template/partials/
 
+
+
             variables {
             siteName = TEXT
             siteName.value = 1. BC Beuel
+
+            contentElements = CONTENT
+            contentElements {
+                table = sys_category
+                select {
+                    pidInList = root,-1
+                    selectFields = sys_category.*
+                    join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
+                    where.data = field:_ORIG_uid // field:uid
+                    where.intval = 1
+                    where.wrap = sys_category_record_mm.uid_foreign=|
+                    orderBy = sys_category_record_mm.sorting_foreign
+                }
+            }
 
             content < styles.content.get
             content_left < styles.content.getLeft
             content_right < styles.content.getRight
             content_border < styles.content.getBorder
-
-
+            termine < temp.terminElement
+            teams < temp.teamElement
         }
     }
-
-    20 = TEXT
-    20.value = Lorem ipsum
-
 }
 
 // Search

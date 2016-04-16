@@ -70,7 +70,6 @@ hr {
 }
 
 
-
 .container-fluid > div {
     margin-left:12%;
     margin-right:12%;
@@ -87,7 +86,7 @@ hr {
     margin-left: 50px;
 }
 
-
+/* for some reason both are necessary*/
 .navbar-default .navbar-nav>li>a {
     color: #000000;
     font-family: Consolas, Arial, Helvetica, sans-serif;
@@ -95,18 +94,30 @@ hr {
     text-decoration: none;
 }
 
-.navbar-default .navbar-nav>li>a:hover {
-    color: black;
+
+.navbar-default .navbar-nav a {
+    color: #000000;
     font-family: Consolas, Arial, Helvetica, sans-serif;
     font-weight: bold;
-    background-color: #FCE405;
+    text-decoration: none;
 }
+
+
+
+.navbar-default .navbar-nav a:hover {
+    background-color:#FCE405;
+}
+
 
 .navbar {
     position: relative;
 }
 
 
+
+.navbar-default .navbar-nav a:hover {
+    background-color: #FCE405;
+}
 .navbar-default .navbar-nav>.open>a:focus {
     background-color: #FCE405;
 }
@@ -119,13 +130,16 @@ hr {
 }
 
 
-.navbar-default .navbar-nav>.open>ul>li>a:hover {
-    color: #000000;
-    font-family: Consolas, Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    background-color: #FCE405;
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
 
 .brand {
     position: absolute;
@@ -171,29 +185,62 @@ hr {
 }
 
 
-
-/* Carousel
-.carousel-inner {
-  height: 30em;
+/*carousel related things below*/
+.carousel {
+    margin-bottom: 50px;
+    background-color: black;
+    height: 430px;
 }
-*/
+
+.carousel-inner {
+    height: 400px;
+}
+
+.slidermenu {
+    background-color: #FCE405;
+    color: black;
+    height:100%;
+}
 
 .carousel-caption {
+    position: absolute;
     top: 26%;
+    width:100%;
+    left: 0;
     font-size: 320%;
+    height:400px;
     font-weight: bolder;
-    color: #FCE405;
     text-shadow: none;
+    background-color: #FCE405;
+    color: black;
+}
+
+.container {
+    display:inline-block;
 }
 
 .carousel-control {
-    height: 100%; /* Just to please Chrome */
+    height: 30%; /* Just to please Chrome */
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 70%;
+    background: none;
 }
+
 .carousel-control>img {
     position: relative;
-    top: 43%;
+    top: 50%;
     opacity: 1.0;
 }
+
+.carousel-control.left {
+    background: none;
+}
+
+.carousel-control.left>a{
+    background: yellow;
+}
+
 
 .carousel-indicators li {
     background-color: #FFF67F;
@@ -210,3 +257,28 @@ hr {
     opacity: 1.0;
     margin: 0px 5px;
 }
+
+ol.carousel-indicators {
+    position: absolute;
+    top: 95%;
+}
+
+#leftslide {
+    position: relative;
+    left: 0px;
+}
+
+
+#leftslide:hover {
+    background-color: yellow;
+}
+
+#rightslide {
+    position: absolute;
+    float:right ;
+}
+
+#rightslide:hover {
+    background-color: yellow;
+}
+
