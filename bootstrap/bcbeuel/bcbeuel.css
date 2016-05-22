@@ -7,23 +7,30 @@ html {
 
 body {
     padding-top: 15px;
-    font-family: Times, Garamond, Minion;
+    font-family: 'Source Sans Pro', Calibri, sans-serif;
     background-color: white;
 }
 
 a {
-    font-family: Consolas, Arial, Helvetica, sans-serif
+    font-family: 'Source Sans Pro', Consolas, sans-serif;
 }
 
 /* Menu */
 .menutd a {
-    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', Consolas, sans-serif;
     font-weight: bold;
     letter-spacing: 0.03em;
     text-decoration: none;
     padding-right: 40px;
 }
 
+.submenu a{
+    font-family: Courier, Consolas, serif;
+}
+
+.submenu div{
+    font-family: Courier, Consolas, serif;
+}
 /* Misc */
 
 h3 {
@@ -89,7 +96,7 @@ hr {
 /* for some reason both are necessary*/
 .navbar-default .navbar-nav>li>a {
     color: #000000;
-    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-family: Courier, Consolas, Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
 }
@@ -97,7 +104,7 @@ hr {
 
 .navbar-default .navbar-nav a {
     color: #000000;
-    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-family: Courier, Consolas, Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
 }
@@ -113,8 +120,6 @@ hr {
     position: relative;
 }
 
-
-
 .navbar-default .navbar-nav a:hover {
     background-color: #FCE405;
 }
@@ -124,7 +129,7 @@ hr {
 
 .navbar-default .navbar-nav>.open>ul>li>a {
     color: #000000;
-    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-family: Courier, Consolas, Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
 }
@@ -137,9 +142,6 @@ hr {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-
-
-
 
 .brand {
     position: absolute;
@@ -182,6 +184,11 @@ hr {
     background-color: #FCE405;
     height: 150px;
     padding-top: 30px;
+}
+
+.footer a{
+    text-decoration: none;
+    font-family: Courier, Consolas, serif;
 }
 
 
@@ -228,8 +235,6 @@ hr {
 }
 
 .carousel-control>img {
-    position: relative;
-    top: 50%;
     opacity: 1.0;
 }
 
@@ -282,3 +287,26 @@ ol.carousel-indicators {
     background-color: yellow;
 }
 
+@media screen and (max-width: 768px) {
+    .carousel-inner .item a img {
+        visibility: hidden;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .collapsing_image {
+        visibility: hidden;
+        clear: both;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 28%;
+        display: none;
+    }
+}
+
+.collapsing_image img {
+    overflow: hidden;
+    width: 100%;
+    max-width: 130px;
+}

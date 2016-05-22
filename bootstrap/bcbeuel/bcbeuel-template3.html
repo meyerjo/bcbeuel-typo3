@@ -1,4 +1,5 @@
 <!-- bcbeuel Typo3 Template (3-spaltig) -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -26,6 +27,11 @@
                 <li><a href="?id=709">JUGEND</a></li>
                 <li><a href="?id=565">HOBBY</a></li>
                 <li><a href="?id=223">SPONSOREN</a></li>
+                <li>
+                    <a href="#">
+                        <img src="fileadmin/babb/BABB_Logo_s.png" height="32px"/>
+                    </a>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><A HREF="http://www.facebook.com/bcbeuel?sk=wall" TARGET="_blank"><IMG SRC="icons/Facebook.png"></A></li>
@@ -36,33 +42,26 @@
     </div>
 </nav>
 
-<div class="container-fluid maincontent">
+<div class="container-fluid maincontent submenu">
     <!-- Menu mit mannschaften, terminen, babb und bundesliga -->
     <div class="row">
         <div class="row-height">
-            <div class="col-xs-3 teamarea col-height col-top">
+            <div class="col-sm-3 teamarea col-height col-top">
                 <div class="inside">
                     <f:format.raw>{teams}</f:format.raw>
                 </div>
             </div> <!-- col-sm-3 -->
-            <div class="col-xs-5 col-height col-top">
+            <div class="col-sm-7 col-height col-top">
                 <div class="inside">
                     <div class="headline">TERMINE</div>
                     <div class="termine">
                         <f:format.raw>{termine}</f:format.raw>
                     </div>
                 </div>
-            </div> <!-- col-sm-6 -->
-            <div class="col-xs-2 col-height col-middle">
-                <div class="inside">
-                    <img src="fileadmin/babb/BABB_Logo_s.png" height="130px"/>
-                </div>
             </div>
-            <div class="col-xs-2 col-height col-middle">
-                <div class="inside">
-                    <a href="http://babb.bcbeuel.de/"><img src="fileadmin/bcbeuel/bbl-150.png"/></a>
-                </div>
-            </div>
+            <a class="col-sm-2 col-height col-middle collapsing_image" href="http://babb.bcbeuel.de/">
+                <img src="fileadmin/bcbeuel/bbl-150.png"/>
+            </a>
         </div>
     </div>
 </div>
@@ -91,30 +90,30 @@
 
                     <div class="item active">
                         <a href="?id=1182" target="_top">
-                            <div class="col-sm-4 slidermenu container">
+                            <div class="col-sm-4 col-xs-12 slidermenu container">
                                 <div class="carousel-caption col-height">8.Spieltag</div>
                             </div>
-                            <img class="col-sm-8 container" src="fileadmin/user_upload/Eva_Janssens_11_15.jpg"/>
+                            <img class="col-sm-8 col-xs-0 container" src="fileadmin/user_upload/Eva_Janssens_11_15.jpg"/>
                         </a>
                     </div>
 
                     <!-- 1. Image -->
                     <div class="item">
                         <a href="?id=1176" target="_top">
-                            <div class="col-sm-4 slidermenu container" >
+                            <div class="col-sm-4 col-xs-12 slidermenu container" >
                                 <div class="carousel-caption">Knappe Niederlage in Refrath</div>
                             </div><!--
-                            --><img class="col-sm-8 container" src="fileadmin/user_upload/Luise_Heim_10_15.jpg"/>
+                            --><img class="col-sm-8 col-xs-0 container" src="fileadmin/user_upload/Luise_Heim_10_15.jpg"/>
                         </a>
                     </div>
 
                     <!-- 2. Image -->
                     <div class="item">
                         <a href="?id=1177" target="_top">
-                            <div class="col-sm-4 slidermenu container">
+                            <div class="col-sm-4 col-xs-12 slidermenu container">
                                 <div class="carousel-caption">Glatter Erfolg gegen Anspach</div>
                             </div>
-                            <img class="col-sm-8 container" src="fileadmin/user_upload/Raphael_Beck_11_15.jpg"/>
+                            <img class="col-sm-8 col-xs-0 container" src="fileadmin/user_upload/Raphael_Beck_11_15.jpg"/>
                         </a>
                     </div>
                 </div>  <!-- carousel-inner -->
@@ -122,13 +121,13 @@
             <!-- Content -->
             <hr />
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-6 col-md-4">
                     <f:format.raw>{content_left}</f:format.raw>
                 </div> <!-- col-sm-6 -->
-                <div class="col-sm-5">
+                <div class="col-sm-6 col-md-4">
                     <f:format.raw>{content}</f:format.raw>
                 </div> <!-- col-sm-6 -->
-                <div class="col-sm-2">
+                <div class="col-md-4 hidden-sm">
                     <f:format.raw>{sidebar}</f:format.raw>
                 </div>
             </div> <!-- row -->
@@ -152,9 +151,12 @@
 </div>
 <div class="container-fluid footer">
     <div class="row-fluid">
-        <a href="?id=162">IMPRESSUM</a>
-        <a href="?id=47">INTERN</a>
-        <a href="?id=565">ARCHIV</a>
-        <a href="#">DATENSCHUTZ</a>
+        <div class="col-sm-6">
+            <a href="?id=162">IMPRESSUM</a>
+            <a href="?id=47">INTERN</a>
+            <a href="?id=565">ARCHIV</a>
+            <a href="#">DATENSCHUTZ</a>
+        </div>
+        <div class="col-sm-6"><span class="pull-right">© 2015 1.BC Beuel 1955 e.V.</span></div>
     </div>
 </div>
