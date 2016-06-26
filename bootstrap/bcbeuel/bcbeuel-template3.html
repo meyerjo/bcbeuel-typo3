@@ -14,29 +14,63 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav mainmenu">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DER VEREIN<span class="caret"></span></a>
+                    <a href="index.php?id=1236" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DER VEREIN<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="?id=495">Foerdervein</a></li>
-                        <li><a href="?id=17">Mitgliedschaft</a></li>
-                        <li><a href="#">Training</a></li>
+                        <li><a href="?id=1236">&Uuml;ber uns</a></li>
+                        <li><a href="?id=1237">Mitgliedschaft</a></li>
+                        <li><a href="?id=1238">Vorstand</a></li>
+                        <li><a href="?id=1239">Erwin-Kranz-Halle</a></li>
+                        <li><a href="?id=1240">Clubheim</a></li>
                         <li><a href="?id=18">Kontakt</a></li>
-                        <li><a href="?id=787">Offene Stellen</a></li>
                     </ul>
                 </li>
-                <li><a href="?id=11">BUNDESLIGA</a></li>
-                <li><a href="?id=709">JUGEND</a></li>
-                <li><a href="?id=565">HOBBY</a></li>
-                <li><a href="?id=223">SPONSOREN</a></li>
-                <li>
-                    <a href="#">
+                <li class="dropdown">
+					<a href="?id=1232" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BUNDESLIGA<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?id=1248">Kader</a></li>
+                        <li><a href="?id=1249">Termine</a></li>
+                        <li><a href="?id=1250">Fan-Mitgliedschaft</a></li>
+					</ul>
+				</li>
+                <li class="dropdown">
+					<a href="?id=1233" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ERWACHSENE<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?id=1254">Wettkampfsport</a></li>
+                        <li><a href="?id=1251">Freizeitsport</a></li>
+                        <li><a href="?id=1255">Trainingssport</a></li>
+					</ul>
+				</li>
+                <li class="dropdown">
+					<a href="?id=1234" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KINDER UND JUGEND<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?id=1256">Wettkampfsport</a></li>
+                        <li><a href="?id=1258">Kindertraining U11</a></li>
+                        <li><a href="?id=1259">Freizeitsport</a></li>
+                        <li><a href="?id=1260">Trainingszeiten</a></li>
+					</ul>
+				</li>
+                <li class="dropdown">
+					<a href="?id=1235" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPONSOREN<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?id=1263">Sponsoren und Foerderer</a></li>
+                        <li><a href="?id=1264">Sponsor werden</a></li>
+                        <li><a href="?id=1265">Wunschliste</a></li>
+                        <li><a href="?id=1266">Club der 100er</a></li>
+                        <li><a href="?id=1267">Foerderverein</a></li>
+					</ul>
+				</li>
+                <li class="dropdown">
+                    <a href="?id=1296" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <img src="fileadmin/babb/BABB_Logo_s.png" height="32px"/>
-                    </a>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?id=1296">Das Konzept</a></li>
+                        <li><a href="?id=1297">Die Leitung</a></li>
+                        <li><a href="?id=1298">Auszeichnungen</a></li>
+                        <li><a href="?id=1299">BEC Training Center</a></li>
+                        <li><a href="?id=1300">Ausbildungsfonds</a></li>
+					</ul>
                 </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><A HREF="http://www.facebook.com/bcbeuel?sk=wall" TARGET="_blank"><IMG SRC="icons/Facebook.png"></A></li>
-                <li><A HREF="http://twitter.com/bcbeuel" TARGET="_blank"><IMG SRC="icons/Twitter.png"></A></li>
-                <li><A HREF="http://www.youtube.com/1bcbeuel" TARGET="_blank"><IMG SRC="icons/YouTube.png"></A></li>
             </ul>
         </div>
     </div>
@@ -44,7 +78,7 @@
 
 <div class="container-fluid maincontent submenu">
     <!-- Menu mit mannschaften, terminen, babb und bundesliga -->
-    <div class="row">
+    <div class="row hidden-xs">
         <div class="row-height">
             <div class="col-sm-3 teamarea col-height col-top">
                 <div class="inside">
@@ -127,13 +161,42 @@
                 <div class="col-sm-6 col-md-4">
                     <f:format.raw>{content}</f:format.raw>
                 </div> <!-- col-sm-6 -->
-                <div class="col-md-4 hidden-sm">
+                <div class="col-md-4 hidden-sm hidden-xs">
                     <f:format.raw>{sidebar}</f:format.raw>
                 </div>
             </div> <!-- row -->
         </div>  <!-- col-sm-9 -->
     </div>  <!-- row -->
 </div> <!-- container -->
+
+<div class="container-fluid maincontent submenu visible-xs-block">
+    <!-- Menu mit mannschaften, terminen, babb und bundesliga -->
+    <div class="row">
+        <div class="row-height">
+            <div class="col-sm-12 teamarea col-height col-top">
+                <div class="inside">
+                    <f:format.raw>{teams}</f:format.raw>
+                </div>
+            </div> <!-- col-sm-3 -->        
+	</div>
+    </div>
+    <div class="row">
+        <div class="row-height">
+            <div class="col-sm-12 col-height col-top">
+                <div class="inside">
+                    <div class="headline">TERMINE</div>
+                    <div class="termine">
+                        <f:format.raw>{termine}</f:format.raw>
+                    </div>
+                </div>
+            </div>
+            <a class="col-sm-2 col-height col-middle collapsing_image" href="http://babb.bcbeuel.de/">
+                <img src="fileadmin/bcbeuel/bbl-150.png"/>
+            </a>
+        </div>
+    </div>
+</div>
+
 
 <div class="container-fluid sponsors">
     <div class="row-fluid">

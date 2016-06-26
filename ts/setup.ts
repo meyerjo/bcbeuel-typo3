@@ -12,11 +12,16 @@ config {
 
 temp.terminElement = RECORDS
 temp.terminElement.tables = tt_content
-temp.terminElement.source = 5234
+temp.terminElement.source = 5125
 
 temp.teamElement = RECORDS
 temp.teamElement.tables = tt_content
-temp.teamElement.source = 5235
+temp.teamElement.source = 5126
+
+temp.sideBarElement = RECORDS
+temp.sideBarElement.tables = tt_content
+temp.sideBarElement.source = 5127
+
 
 # Page layout
 page = PAGE
@@ -81,6 +86,7 @@ page {
             content_border < styles.content.getBorder
             termine < temp.terminElement
             teams < temp.teamElement
+            sidebar < temp.sideBarElement
         }
     }
 }
