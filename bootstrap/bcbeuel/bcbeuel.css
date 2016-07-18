@@ -18,7 +18,6 @@ a {
 /* Menu */
 .menutd a {
     font-family: 'Source Sans Pro', Consolas, sans-serif;
-    font-weight: bold;
     letter-spacing: 0.03em;
     text-decoration: none;
     padding-right: 40px;
@@ -97,7 +96,7 @@ hr {
 .navbar-default .navbar-nav>li>a {
     color: #000000;
     font-family: Courier, Consolas, Arial, Helvetica, sans-serif;
-    font-weight: bold;
+
     text-decoration: none;
 }
 
@@ -105,7 +104,7 @@ hr {
 .navbar-default .navbar-nav a {
     color: #000000;
     font-family: Courier, Consolas, Arial, Helvetica, sans-serif;
-    font-weight: bold;
+
     text-decoration: none;
 }
 
@@ -195,7 +194,7 @@ hr {
 /*carousel related things below*/
 .carousel {
     margin-bottom: 50px;
-    background-color: black;
+    background-color: #8DCFF0;
     height: 430px;
 }
 
@@ -209,17 +208,24 @@ hr {
     height:100%;
 }
 
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	line-height: 1;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
 .carousel-caption {
     position: absolute;
     top: 26%;
     width:100%;
     left: 0;
-    font-size: 320%;
+    font-size: 300%;
     height:400px;
-    font-weight: bolder;
+    text-align: left;
     text-shadow: none;
     background-color: #FCE405;
     color: black;
+    padding-left: 20px;
 }
 
 .container {
@@ -232,10 +238,6 @@ hr {
     margin-bottom: auto;
     top: 70%;
     background: none;
-}
-
-.carousel-control>img {
-    opacity: 1.0;
 }
 
 .carousel-control.left {

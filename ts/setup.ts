@@ -12,15 +12,15 @@ config {
 
 temp.terminElement = RECORDS
 temp.terminElement.tables = tt_content
-temp.terminElement.source = 5125
+temp.terminElement.source = 5590
 
 temp.teamElement = RECORDS
 temp.teamElement.tables = tt_content
-temp.teamElement.source = 5126
+temp.teamElement.source = 5589
 
 temp.sideBarElement = RECORDS
 temp.sideBarElement.tables = tt_content
-temp.sideBarElement.source = 5127
+temp.sideBarElement.source = 5591
 
 
 # Page layout
@@ -37,21 +37,21 @@ page {
         keywords = Badminton, Federball, Club, Verein, Bonn, Beuel, Bundesliga, Deutscher Meister, Maywald, Zwiebler
         description = 1. Badminton Club Beuel 1955 e.V., 1. BC Beuel, Federball Verein in Bonn
         copyright = 1. BC Beuel
-        author = Ottmar Kr�mer-Fuhrmann
+        author = 1. BC Beuel
         language = de
         robots = all
     } // meta
 
     includeCSS {
-        bootstrap = fileadmin/template/bootstrap/css/bootstrap.min.css
-        colsmheight = fileadmin/template/bootstrap/css/col-sm-height.css
-        bcbeuel = fileadmin/template/bootstrap/bcbeuel/bcbeuel.css
+        bootstrap = fileadmin/bcbeuel_new/bcbeuel-typo3/bootstrap/css/bootstrap.min.css
+        colsmheight = fileadmin/bcbeuel_new/bcbeuel-typo3/bootstrap/css/col-sm-height.css
+        bcbeuel = fileadmin/bcbeuel_new/bcbeuel-typo3/bootstrap/bcbeuel/bcbeuel.css
     }
 
     includeJS {
-        jquery = fileadmin/template/bootstrap/js/jquery.min.js
-        bootstrap = fileadmin/template/bootstrap/js/bootstrap.min.js
-        carousel = fileadmin/template/bootstrap/js/carousel.js
+        jquery = fileadmin/bcbeuel_new/bcbeuel-typo3/bootstrap/js/jquery.min.js
+        bootstrap = fileadmin/bcbeuel_new/bcbeuel-typo3/bootstrap/js/bootstrap.min.js
+        carousel = fileadmin/bcbeuel_new/bcbeuel-typo3/bootstrap/js/carousel.js
     }
 
     10 = FLUIDTEMPLATE

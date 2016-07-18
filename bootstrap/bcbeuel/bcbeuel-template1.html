@@ -9,28 +9,68 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand brand" href="/bcbeuel"><img src="http://placehold.it/60x60" alt="1. BC Beuel"></a>
+            <a class="navbar-brand brand" href="/"><img src="icons/BCB_Logo_6.png" width="60px" alt="1. BC Beuel"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav mainmenu">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DER VEREIN<span class="caret"></span></a>
+                    <a href="index.php?id=1236" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DER 1.BC BEUEL<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="?id=495">Foerdervein</a></li>
-                        <li><a href="?id=17">Mitgliedschaft</a></li>
-                        <li><a href="#">Training</a></li>
-                        <li><a href="?id=18">Kontakt</a></li>
-                        <li><a href="?id=787">Offene Stellen</a></li>
+                        <li><a href="?id=1236">&Uuml;ber uns</a></li>
+                        <li><a href="?id=1237">Mitgliedschaft</a></li>
+                        <li><a href="?id=1240">Vorstand</a></li>
+                        <li><a href="?id=1242">Erwin-Kranz-Halle</a></li>
+                        <li><a href="?id=1244">Clubheim</a></li>                        
+			<li><a href="?id=1317">Fanshop</a></li>
+                        <li><a href="?id=1315">Kontakt</a></li>
                     </ul>
                 </li>
-                <li><a href="?id=11">BUNDESLIGA</a></li>
-                <li><a href="?id=709">JUGEND</a></li>
-                <li><a href="?id=565">HOBBY</a></li>
-                <li><a href="?id=223">SPONSOREN</a></li>
-                <li>
-                    <a href="#">
+                <li class="dropdown">
+					<a href="?id=1232" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BUNDESLIGA<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?id=1248">Kader</a></li>
+                        <li><a href="?id=1249">Termine</a></li>
+                        <li><a href="?id=1250">Fan-Mitgliedschaft</a></li>
+					</ul>
+				</li>
+                <li class="dropdown">
+					<a href="?id=1233" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ERWACHSENE<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?id=1254">Wettkampf</a></li>
+                        <li><a href="?id=1251">Freizeit</a></li>
+                        <li><a href="?id=1255">Trainingszeiten</a></li>
+					</ul>
+				</li>
+                <li class="dropdown">
+					<a href="?id=1234" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KINDER UND JUGEND<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?id=1256">Wettkampf</a></li>
+                        <li><a href="?id=1258">Kindertraining U11</a></li>
+                        <li><a href="?id=1259">Freizeit</a></li>
+                        <li><a href="?id=1334">Queen-Games-Cup</a></li>
+					</ul>
+				</li>
+                <li class="dropdown">
+					<a href="?id=1235" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPONSOREN<span class="caret"></span></a>
+                    <ul class="dropdown-menu">                        
+			<li><a href="?id=1264">Sponsor werden</a></li>
+                        <li><a href="?id=1316">Sponsoren und Foerderer</a></li>
+                        <li><a href="?id=1265">Wunschliste</a></li>
+                        <li><a href="?id=1266">Club der 100er</a></li>
+                        <li><a href="?id=1267">Foerderverein</a></li>
+					</ul>
+				</li>
+                <li class="dropdown">
+                    <a href="?id=1296" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <img src="fileadmin/babb/BABB_Logo_s.png" height="32px"/>
-                    </a>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?id=1296">Das Konzept</a></li>
+                        <li><a href="?id=1297">Die Leitung</a></li>
+                        <li><a href="?id=1298">Auszeichnungen</a></li>
+                        <li><a href="?id=1318">BEC Training Center</a></li>
+                        <li><a href="?id=1300">Ausbildungsfonds</a></li>
+					</ul>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -42,37 +82,30 @@
     </div>
 </nav>
 
-<div class="container-fluid maincontent">
+<div class="container-fluid maincontent submenu">
     <!-- Menu mit mannschaften, terminen, babb und bundesliga -->
-    <div class="row">
+    <div class="row hidden-xs">
         <div class="row-height">
-            <div class="col-xs-3 teamarea col-height col-top">
+            <div class="col-sm-3 teamarea col-height col-top">
                 <div class="inside">
                     <f:format.raw>{teams}</f:format.raw>
                 </div>
             </div> <!-- col-sm-3 -->
-
-            <div class="col-xs-5 col-height col-top">
+            <div class="col-sm-7 col-height col-top">
                 <div class="inside">
                     <div class="headline">TERMINE</div>
                     <div class="termine">
                         <f:format.raw>{termine}</f:format.raw>
                     </div>
                 </div>
-            </div> <!-- col-sm-6 -->
-            <div class="col-xs-2 col-height col-middle">
-                <div class="inside">
-                    <img src="fileadmin/babb/BABB_Logo_s.png" height="130px"/>
-                </div>
             </div>
-            <div class="col-xs-2 col-height col-middle">
-                <div class="inside">
-                    <a href="http://babb.bcbeuel.de/"><img src="fileadmin/bcbeuel/bbl-150.png"/></a>
-                </div>
-            </div>
+            <a class="col-sm-2 col-height col-middle collapsing_image" href="#">
+                <img src="fileadmin/bcbeuel/bbl-150.png" align="right"/>
+            </a>
         </div>
     </div>
 </div>
+
 
 <div class="container-fluid maincontent">
     <!-- Breadcrumb -->
@@ -80,17 +113,13 @@
 
     <!-- Content from Typo3 -->
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-md-3 hidden-xs hidden-sm">
             <!-- News -->
             <f:format.raw>{content_left}</f:format.raw>
         </div>
-        <div class="col-sm-6 content">
+        <div class="col-md-9 col-sm-12 content">
             <!-- Content -->
             <f:format.raw>{content}</f:format.raw>
-        </div>
-        <div class="col-sm-3">
-            <!-- News -->
-            <f:format.raw>{content_right}</f:format.raw>
         </div>
     </div>
 
@@ -100,22 +129,27 @@
 <div class="container-fluid sponsors">
     <div class="row-fluid">
         <div class="col-sm-12" style="margin-top: 20px">
-            <img src="fileadmin/bcbeuel/Sponsoren2/SER_Group_150.png" class="col-sm-2"/>
-            <img src="fileadmin/bcbeuel/Sponsoren2/VICTOR_2013_Web-s.jpg" class="col-sm-2"/>
-            <img src="fileadmin/bcbeuel/Sponsoren/sparkasse-s.jpg" class="col-sm-2"/>
-            <img src="fileadmin/bcbeuel/Sponsoren2/tacos_150.png" class="col-sm-2"/>
-            <img src="fileadmin/bcbeuel/Sponsoren2/Auto_Thomas_Logo_150.png" class="col-sm-2"/>
+            <a href="www.ser.de" target="_blank"><img src="fileadmin/bcbeuel/Sponsoren2/SER_Group_150.png" class="col-sm-2"/></a>
+            <a href="www.victor-international.com" target="_blank"><img src="fileadmin/bcbeuel/Sponsoren2/VICTOR_2013_Web-s.jpg" class="col-sm-2"/></a>
+            <a href="www.sparkasse-koelnbonn.de" target="_blank"><img src="fileadmin/bcbeuel/Sponsoren/sparkasse-s.jpg"  class="col-sm-2"/></a>
+            <a href="www.auto-thomas.de" target="_blank" ><img src="fileadmin/bcbeuel/Sponsoren2/Auto_Thomas_Logo_150.png" class="col-sm-2" /></a>
+   
+<div class="col-sm-2">
+<script type="text/javascript" src="https://imagesrv.adition.com/js/adition.js"></script> <script type="text/javascript" src="https://adfarm1.adition.com/js?wp_id=3490720"></script>
+</div>
         </div>
         <div class="col-sm-12" style="margin-top: 30px;">
-            <a href="?id=223"><img src="icons/Sponsoren.png"></a>
+            <a href="?id=1316"><img src="icons/Sponsoren.png"></a>
         </div>
     </div>
 </div>
 <div class="container-fluid footer">
     <div class="row-fluid">
-        <a href="?id=162">IMPRESSUM</a>
-        <a href="?id=47">INTERN</a>
-        <a href="?id=565">ARCHIV</a>
-        <a href="#">DATENSCHUTZ</a>
+        <div class="col-sm-6">
+        	<a href="?id=1332">IMPRESSUM</a>
+	        <a href="?id=565">ARCHIV</a>
+        	<a href="?id=1333">DATENSCHUTZ</a>
+        </div>
+        <div class="col-sm-6"><span class="pull-right">© 2016 1.BC Beuel 1955 e.V.</span></div>
     </div>
 </div>
