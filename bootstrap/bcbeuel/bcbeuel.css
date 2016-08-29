@@ -129,7 +129,6 @@ hr {
 .navbar-default .navbar-nav>.open>ul>li>a {
     color: #000000;
     font-family: Courier, Consolas, Arial, Helvetica, sans-serif;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -143,9 +142,6 @@ hr {
 }
 
 .brand {
-    position: absolute;
-    top: 50%;
-    margin-top: -50px !important;  /* 50% of your logo width */
     display: block;
 }
 
@@ -153,6 +149,10 @@ hr {
     position: absolute;
     display: block;
     margin-top: 10px;
+}
+
+.navbar-brand {
+   height: 120px;
 }
 
 .maincontent {
@@ -176,7 +176,7 @@ hr {
 }
 
 .mainmenu {
-    margin-left: 60px;
+    padding-top: 40px;
 }
 
 .footer {
